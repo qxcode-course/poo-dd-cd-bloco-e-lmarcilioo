@@ -43,6 +43,13 @@ def processar_pagamentos(pagamentos: list[Pagamento]):
         if isinstance(pag, CartaoCredito):
             print(pag.get_limite())
 
+class Pix(Pagamento):
+    def __init__(self, valor: float, descrição:str, chave: int, banco: str):
+        super().__init__(valor,descrição)
+        self.chave = chave
+        self.banco = banco
+        
+
 
 
                                            
