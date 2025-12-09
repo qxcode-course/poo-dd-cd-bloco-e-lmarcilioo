@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2025-12-01_19-56-55",
-            "content": "",
+            "content": "@@ -1,467 +0,0 @@\n-from abc import ABC, abstractmethod%0A%0Aclass Animal(ABC):%0A    def __init__(self, name : str) :%0A        self.__name : str = name%0A    %0A    @abstractmethod%0A    def fazer_som (self):%0A        pass%0A%0A    @abstractmethod%0A    def mover(self):%0A        pass%0A%0A    def getName (self) -%3E str :%0A        return self.__name%0A    %0A    def setName (self, name : str) :%0A        self.__name = name%0A%0A    def apresentarNome (self) -%3E str :%0A        return f%22Eu sou um(a) %7Bself.getName()%7D%22%0A    %0A\n",
             "lines": "0"
+        },
+        {
+            "label": "2025-12-09_18-52-53",
+            "content": "@@ -464,807 +464,4 @@\n    %0A\n-class Leao(Animal):%0A    def __init__(self):%0A        super().__init__(self.getName())%0A%0A    def fazer_som(self):%0A        print(%22ROARRRRRR%22)%0A%0A    def mover(self):%0A        print(%22TUM-TUM-TUM. O LE%C3%83O ANDA PELA SELVA!!!!!%22)%0A%0Aclass Elefante(Animal):%0A    def __init__(self) :%0A        super().__init__(self.getName())%0A%0A    def fazer_som(self) :%0A        print (%22fummmmmmmm%22)%0A%0A    def mover(self) :%0A        print(%22BUM! BUM! BUM!. O ELEFANTE ANDA PELA SELVA!!!!!!%22)%0A%0Aclass Snake(Animal) :%0A    def __init__(self) :%0A        super().__init__(self.getName())%0A%0A    def fazer_som(self) :%0A        print(%22SSSSSSSSSSSSSS%22)%0A%0A    def mover(self) :%0A        print(%22SSSSSSSSSSSSSSSSS. A COBRA RASTEJA PELA SELVA!!!!!!%22)%0A%0Adef apresentar_animal(animal: Animal):%0A    animal.apresentarNome()%0A    animal.fazer_som()%0A    animal.mover()\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-12-09_19-15-22",
+            "content": "@@ -501,27 +501,16 @@\n t__(self\n-, name: str\n ):%0A     \n@@ -521,36 +521,46 @@\n uper().__init__(\n-n\n+self.getN\n ame\n+()\n )%0A%0A    def fazer\n@@ -720,35 +720,24 @@\n _init__(self\n-, name: str\n ) :%0A        \n@@ -745,36 +745,46 @@\n uper().__init__(\n-n\n+self.getN\n ame\n+()\n )%0A%0A    def fazer\n@@ -962,19 +962,8 @@\n self\n-, name: str\n ) :%0A\n@@ -987,20 +987,30 @@\n _init__(\n-n\n+self.getN\n ame\n+()\n )%0A%0A    d\n@@ -1245,16 +1245,16 @@\n r_som()%0A\n+\n     anim\n@@ -1267,130 +1267,4 @@\n er()\n-%0A%0AlistaAnimal: list%5BAnimal%5D= %5BLeao('Simba'), Elefante(%22Dumbo%22), Snake('DJ')%5D%0Afor i in listaAnimal:%0A    apresentar_animal(i)%0A%0A%0A\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-12-09_19-23-29",
+            "content": "from abc import ABC, abstractmethod\n\nclass Animal(ABC):\n    def __init__(self, name : str) :\n        self.__name : str = name\n    \n    @abstractmethod\n    def fazer_som (self):\n        pass\n\n    @abstractmethod\n    def mover(self):\n        pass\n\n    def getName (self) -> str :\n        return self.__name\n    \n    def setName (self, name : str) :\n        self.__name = name\n\n    def apresentarNome (self) -> str :\n        return f\"Eu sou um(a) {self.getName()}\"\n    \nclass Leao(Animal):\n    def __init__(self, name: str):\n        super().__init__(name)\n\n    def fazer_som(self):\n        print(\"ROARRRRRR\")\n\n    def mover(self):\n        print(\"TUM-TUM-TUM. O LE\u00c3O ANDA PELA SELVA!!!!!\")\n\nclass Elefante(Animal):\n    def __init__(self, name: str) :\n        super().__init__(name)\n\n    def fazer_som(self) :\n        print (\"fummmmmmmm\")\n\n    def mover(self) :\n        print(\"BUM! BUM! BUM!. O ELEFANTE ANDA PELA SELVA!!!!!!\")\n\nclass Snake(Animal) :\n    def __init__(self, name: str) :\n        super().__init__(name)\n\n    def fazer_som(self) :\n        print(\"SSSSSSSSSSSSSS\")\n\n    def mover(self) :\n        print(\"SSSSSSSSSSSSSSSSS. A COBRA RASTEJA PELA SELVA!!!!!!\")\n\ndef apresentar_animal(animal: Animal):\n    animal.apresentarNome()\n    animal.fazer_som()\n    animal.mover()\n\nlistaAnimal: list[Animal]= [Leao('Simba'), Elefante(\"Dumbo\"), Snake('DJ')]\nfor i in listaAnimal:\n    apresentar_animal(i)\n\n\n",
+            "lines": "63"
         }
     ]
 }
