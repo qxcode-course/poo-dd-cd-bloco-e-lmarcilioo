@@ -17,7 +17,7 @@ class Pagamento(ABC):
         pass
 
 class CartaoCredito(Pagamento):
-    def __init__(self, num:int,nome:str,limite:float,valor:float,descrição:str):
+    def __init__(self, valor:float, nome:str,num:str,descrição:str,limite:float):
         super().__init__(valor,descrição)
         self.num = num
         self.nome = nome
@@ -44,14 +44,30 @@ def processar_pagamentos(pagamentos: list[Pagamento]):
             print(pag.get_limite())
 
 class Pix(Pagamento):
-    def __init__(self, valor: float, descrição:str, chave: int, banco: str):
+    def __init__(self, valor: float, descrição:str, chave: str, banco: str):
         super().__init__(valor,descrição)
         self.chave = chave
         self.banco = banco
-        
+    
+    def processar(self):
+        if self.valor <= 0:
+            print('Pix não aprovado')
+            return
+        print(f'PIX enviado via {self.banco} usando chave {self.chave}')
 
 
+class Boleto(Pagamento):
+    def __init__(self, valor: float, descrição:str,codigoBarras:str, vencimento: str):
+        super().__init__(valor,descrição)
+        self.vencimento = vencimento
+        self.codigoBarras= codigoBarras
 
-                                           
-        
+    def processar(self):
+        print ('Boleto gerado. Aguardando pagamento...')
+
+pagamentos: list[Pagamento] = [Pix(150, "Camisa esportiva", "email@ex.com", "Banco XPTO"),
+              CartaoCredito(400, "Tênis esportivo", "1234 5678 9123 4567", "Cliente X", 500),
+              Boleto(89.90,"Livro de Python", "1234567890000", "2025-01-10"),]
+
+processar_pagamentos(pagamentos)
 

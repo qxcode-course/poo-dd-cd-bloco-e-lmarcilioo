@@ -1,0 +1,30 @@
+2025-12-13 00:29:35, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:100, size:78
+2025-12-13 00:29:35, MOVE, v:1, k:poo@pagamento, mode:BACK
+2025-12-13 00:29:44, MOVE, v:1, k:poo@estacionamento, mode:DOWN
+2025-12-13 00:29:44, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-13 00:29:46, MOVE, v:1, k:poo@estacionamento, mode:BACK
+2025-12-13 00:29:48, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-13 00:29:48, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:100
+2025-12-13 00:29:49, MOVE, v:1, k:poo@pagamento, mode:BACK
+2025-12-13 00:29:50, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-13 00:29:58, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:100
+2025-12-13 00:29:59, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:100
+2025-12-13 00:29:59, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:100
+2025-12-13 00:29:59, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:100
+2025-12-13 00:37:58, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:81
+2025-12-13 00:40:08, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-13 00:40:09, MOVE, v:1, k:poo@pagamento, mode:BACK
+2025-12-13 00:40:11, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-13 00:42:43, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-13 00:42:44, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-13 00:42:44, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-13 00:42:44, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-13 00:42:45, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-13 00:44:38, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:81
+2025-12-13 00:45:06, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:82
+2025-12-13 00:45:11, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:82
+2025-12-13 00:45:32, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:82
+2025-12-13 00:45:36, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:82
+2025-12-13 00:47:43, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:81
+2025-12-13 00:57:26, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-13 00:57:27, MOVE, v:1, k:poo@pagamento, mode:BACK

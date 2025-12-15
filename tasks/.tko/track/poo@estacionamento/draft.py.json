@@ -1,0 +1,39 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-14_21-34-05",
+            "content": "@@ -1,21 +0,0 @@\n-import ABC from abc, \n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-14_22-59-31",
+            "content": "@@ -1,13 +1,4 @@\n-from abc \n impo\n@@ -7,542 +7,15 @@\n  ABC\n-, abstractmethod%0A%0Aclass Veiculo(ABC):%0A    def __init__(self, id: str, tipo:str, horaEntrada:int):%0A        self.id = id%0A        self.tipo = tipo%0A        self.horaEntrada = horaEntrada%0A%0A    @abstractmethod%0A    def calcularValor(self):    %0A        pass%0A%0Aclass Estacionamento(Veiculo):%0A    def __init__ (self, horaAtual: int, horaEntrada:int, id:str, tipo: str ):%0A        super().__init__(id, tipo, horaEntrada)%0A        self.veiculos: list %5BVeiculo%5D= %5B%5D%0A        self.horaAtual = horaAtual%0A%0A    def estacionar(self,veiculo: Veiculo):%0A        %0A\n+ from abc, \n",
+            "lines": "1"
+        },
+        {
+            "label": "2025-12-14_23-49-29",
+            "content": "@@ -127,18 +127,16 @@\n elf.\n-__\n id = id%0A\n     \n@@ -131,16 +131,16 @@\n id = id%0A\n+\n         \n@@ -267,55 +267,8 @@\n ss%0A%0A\n-    def getId(self):%0A        return self.__id%0A%0A\n clas\n@@ -510,144 +510,48 @@\n def \n-procurarVeiculo(self, id:str):%0A        for i in self.veiculos:%0A            if i.getId == id:%0A                return i%0A    %0A    %0A            \n+estacionar(self,veiculo: Veiculo):%0A        %0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2025-12-15_00-11-44",
+            "content": "@@ -167,26 +167,24 @@\n        self.\n-__\n horaEntrada \n@@ -314,172 +314,8 @@\n __id\n-%0A    %0A    def setEntrada(self, horaEntrada: int) -%3E None:%0A        self.horaEntrada = horaEntrada%0A%0A    def getEntrada(self) -%3E int:%0A        return self.__horaEntrada\n %0A%0Acl\n@@ -366,16 +366,32 @@\n _ (self,\n+ horaAtual: int,\n  horaEnt\n@@ -540,9 +540,17 @@\n l = \n-0\n+horaAtual\n %0A%0A  \n@@ -681,99 +681,18 @@\n     \n-        %0A    def estacionar(self, veiculo: Veiculo):%0A        self.veiculos.append(veiculo)%0A\n+%0A    %0A    \n     \n",
+            "lines": "28"
+        },
+        {
+            "label": "2025-12-15_00-38-07",
+            "content": "@@ -922,78 +922,4 @@\n     \n-veiculo.setEntrada(self.horaAtual)%0A%0A    def pagar(self, id: str):%0A        \n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-12-15_02-06-09",
+            "content": "@@ -996,131 +996,4 @@\n     \n-for i in self.veiculos:%0A            if i.getId() == id:%0A                valor = i.calcularValor()%0A                return valor%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-12-15_02-36-10",
+            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id: str, tipo:str, horaEntrada:int):\n        self.__id = id\n        self.tipo = tipo\n        self.__horaEntrada = horaEntrada\n\n    @abstractmethod\n    def calcularValor(self):    \n        pass\n\n    def getId(self):\n        return self.__id\n    \n    def setEntrada(self, horaEntrada: int) -> None:\n        self.horaEntrada = horaEntrada\n\n    def getEntrada(self) -> int:\n        return self.__horaEntrada\n\nclass Estacionamento(Veiculo):\n    def __init__ (self, horaEntrada:int, id:str, tipo: str ):\n        super().__init__(id, tipo, horaEntrada)\n        self.veiculos: list [Veiculo]= []\n        self.horaAtual = 0\n\n    def procurarVeiculo(self, id:str):\n        for i in self.veiculos:\n            if i.getId == id:\n                return i\n            \n    def estacionar(self, veiculo: Veiculo):\n        self.veiculos.append(veiculo)\n        veiculo.setEntrada(self.horaAtual)\n\n    def pagar(self, id: str):\n        for i in self.veiculos:\n            if i.getId() == id:\n                valor = i.calcularValor()\n                return valor\n",
+            "lines": "41"
+        }
+    ]
+}
